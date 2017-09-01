@@ -1,5 +1,16 @@
 ﻿@{
     Layout = null;
+
+    var seriesTitle = "Grand Theft Auto 5";
+    var ranking = 1;
+    var description = "<p>The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game’s three lead characters, playing all sides of the game’s interwoven story.<strong></p>";
+    var creaters = new string[]
+    {
+        "Developer: Rockstar North",
+        "Publisher: Rockstar Games",
+        "Series: Grand Theft Auto",
+        "Platform: Xbox One, Playstation 4, PC"
+    };
 }
 
 <!DOCTYPE html>
@@ -11,7 +22,14 @@
 </head>
 <body>
     <div>
-            <h1>Hello from our view!</h1>
+            <h1>@seriesTitle</h1>
+            <h2>Ranking #@ranking</h2>
+
+            <h5>Description:</h5>
+            <div>@Html.Raw(description)</div>
+
+            <h5>Creaters:</h5>
+            <div>@creaters</div>
     </div>
 </body>
 </html>
