@@ -13,5 +13,24 @@ namespace GameGallery.Models
         public string DescriptionHtml { set; get; }
         public Creater[] Creaters { get; set; }
         public bool Favorite { get; set; }
+
+        public string DisplayText
+        {
+            get
+            {
+                return SeriesTitle + " #" + Ranking;
+            }
+
+        }
+
+        // series-title-issuenumber.jpg
+        public string CoverImageFileName
+        {
+            get
+            {
+                return SeriesTitle.Replace(" ", "-")
+                    .ToLower() + "-" + Ranking + ".jpg";
+            }
+        }
     }
 }
