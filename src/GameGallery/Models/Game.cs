@@ -9,8 +9,8 @@ namespace GameGallery.Models
     {
         public int Id { get; set; }
         public string SeriesTitle { get; set; }
-        public int Ranking { set; get; }
-        public string DescriptionHtml { set; get; }
+        public int Ranking { get; set; }
+        public string DescriptionHtml { get; set; }
         public Creater[] Creaters { get; set; }
         public bool Favorite { get; set; }
 
