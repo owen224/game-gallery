@@ -1,24 +1,26 @@
-﻿@{
+﻿@model GameGallery.Models.Game
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Game Detail";
+    ViewBag.Title = Model.DisplayText;
 }
 
     
-<h1>@ViewBag.SeriesTitle</h1>
-<h2>Ranking #@ViewBag.Ranking</h2>
+<h1>@Model.SeriesTitle</h1>
+<h2>Ranking #@Model.Ranking</h2>
 
 <h5>Description:</h5>
-<div>@Html.Raw(ViewBag.Description)</div>
+<div>@Html.Raw(Model.DescriptionHtml)</div>
 
 
-@if (ViewBag.Creaters.Length > 0)
+@if (Model.Creaters.Length > 0)
 {
 <h5>Creaters:</h5>
 <div>   
         <ul>
-        @foreach (var creater in ViewBag.Creaters)
+        @foreach (var creater in Model.Creaters)
         {
-            <li>@creater</li>
+            <li>@creater.Role: @creater.Name</li>
         }
         </ul>
 </div>
