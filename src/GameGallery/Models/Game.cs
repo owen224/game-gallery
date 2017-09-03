@@ -23,7 +23,7 @@ namespace GameGallery.Models
 
         }
 
-        // series-title-issuenumber.jpg
+        // series-title-Ranking.jpg
         public string CoverImageFileName
         {
             get
