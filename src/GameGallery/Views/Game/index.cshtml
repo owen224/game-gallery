@@ -1,7 +1,21 @@
-﻿
+﻿@model GameGallery.Models.Game[]
+
 @{
-    ViewBag.Title = "index";
+    ViewBag.Title = "Games";
 }
 
-<h2>index</h2>
+<h2>Viewbag.Title</h2>
+
+<div class="row">
+    @foreach (var game in Model)
+    {
+    <div class="col-md-3">
+        <h4>@game.DisplayText</h4>
+        <img src="~/Images/@game.CoverImageFileName"
+             alt="@game.DisplayText"
+             class="img-responsive" />
+    
+    </div>
+    }
+</div>
 
