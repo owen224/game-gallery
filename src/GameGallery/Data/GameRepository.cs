@@ -13,6 +13,7 @@ namespace GameGallery.Data
         {
             new Game()
             {
+                Id = 1,
                 SeriesTitle = "Grand Theft Auto 5",
                 Ranking = 1,
                 DescriptionHtml = "<p>The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game’s three lead characters, playing all sides of the game’s interwoven story.<strong></p>",
@@ -27,6 +28,7 @@ namespace GameGallery.Data
 
             new Game()
     {
+        Id = 2,
         SeriesTitle = "Battlefield ",
         Ranking = 2,
         DescriptionHtml = "<p><strong>Battlefield 1 Revolution* brings you into the dawn of all-out warfare, where no battle is ever the same. Join the ranks and revolutionize your play with access to new maps, new modes, and new conflicts.</strong></p>",
@@ -41,6 +43,7 @@ namespace GameGallery.Data
     },
     new Game()
     {
+        Id = 3,
         SeriesTitle = "Call of Duty",
         Ranking = 3,
         DescriptionHtml = "<p><strong>Call of Duty® returns to its roots with Call of Duty®: WWII—a breathtaking experience that redefines World War II for a new gaming generation. Land in Normandy on D-Day and battle across Europe through iconic locations in history’s most monumental war. Experience classic Call of Duty combat, the bonds of camaraderie, and the unforgiving nature of war.</strong></p>",
@@ -55,6 +58,11 @@ namespace GameGallery.Data
     }
 
    };
+
+        internal object GetGame(object id)
+        {
+            throw new NotImplementedException();
+        }
 
         public Game GetGame(int id)
         {
