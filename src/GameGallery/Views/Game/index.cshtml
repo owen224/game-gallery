@@ -10,11 +10,14 @@
     @foreach (var game in Model)
     {
     <div class="col-md-3">
-        <h4>@game.DisplayText</h4>
+        <h4>@Html.ActionLink(game.DisplayText, "Detail",
+           new { id = game.Id })</h4>
+
+        <a href="@Url.Action("Detail", new { id = game.Id })">
         <img src="~/Images/@game.CoverImageFileName"
              alt="@game.DisplayText"
              class="img-responsive" />
-    
+        </a>
     </div>
     }
 </div>
