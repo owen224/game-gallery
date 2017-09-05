@@ -16,6 +16,13 @@ namespace GameGallery.Controllers
         {
             _gameRepository = new GameRepository();
         }
+
+        public ActionResult index()
+        {
+            var game = _gameRepository.GetGame();
+
+            return View(game);
+        }
         public ActionResult Detail(int? id)
         {
             if (id == null)

@@ -59,9 +59,9 @@ namespace GameGallery.Data
 
    };
 
-        internal object GetGame(object id)
+        public Game[] GetGame()
         {
-            throw new NotImplementedException();
+            return _game;
         }
 
         public Game GetGame(int id)
